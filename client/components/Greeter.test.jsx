@@ -9,5 +9,19 @@ describe('<Greeter />', () => {
     let heading = screen.getByRole('heading')
     expect(heading.innerHTML).toContain('yo aihe')
   })
-
+  test("clicking button once, hides greeting", () => {
+    render(<Greeter greeting="yo aihe" />)
+    let button = screen.getByRole('button')
+    fireEvent.click(button)
+    let heading = screen.getByRole('heading')
+    expect(heading.innerHTML).toEqual("")
+  })
+  test("clicking button once, hides greeting", () => {
+    render(<Greeter greeting="yo aihe" />)
+    let button = screen.getByRole('button')
+    fireEvent.click(button)
+    fireEvent.click(button)
+    let heading = screen.getByRole('heading')
+    expect(heading.innerHTML).toContain('yo aihe')
+  })
 })
