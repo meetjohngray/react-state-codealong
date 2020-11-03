@@ -17,7 +17,7 @@ class Greeter extends React.Component {
     let lable = this.state.showGreeting ? 'Hide' : 'Show'
     return (
     <div>
-      Greetings
+      <h2>{this.state.showGreeting && this.state.greeting}</h2>
       <button onClick={this.toggleGreeting}>{lable}</button>
     </div>)
   }
