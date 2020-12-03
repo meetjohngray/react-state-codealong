@@ -1,20 +1,17 @@
 import React from 'react'
+import { Flex, Heading } from '@chakra-ui/react'
+
 import Greeter from './Greeter'
+import Random from './Random'
 
 class App extends React.Component {
-  
- 
-
-  render() {
-   
-    
+  render() {    
     return (
-    <>
-      <h1>React development has begun!</h1>
-      <Greeter greeting="sup"/>
-      {/* <button onClick={this.toggleGreeting}>{lable}</button>
-      {this.state.showGreeting && this.state.greeting} */}
-    </> 
+    <Flex direction='column' align='center'>
+      <Heading>Welcome to React Playground</Heading>
+      <Greeter greeting="How ya goin'?"/>
+      <Random />
+    </Flex> 
     )
   }
 }
